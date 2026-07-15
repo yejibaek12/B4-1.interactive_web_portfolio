@@ -13,10 +13,9 @@
 
 ## 개발 환경 · 제약
 
-- 순수 HTML / CSS / JavaScript만 사용 (React, Vue, jQuery, Bootstrap, Tailwind 미사용)
-- Font Awesome, Google Fonts는 허용
-- `const` / `let`, `addEventListener`, CSS·JS 파일 분리
-- 최신 Chrome 기준
+- 순수 HTML / CSS / JavaScript만 사용 (React, Vue, jQuery, Bootstrap, Tailwind 등 외부라이브러리 사용 금지)
+- `const` / `let`, `addEventListener` 사용
+- 인라인 스타일(`style="..."`) 사용 금지
 
 ---
 
@@ -42,29 +41,43 @@ B4-1.interactive_web_portfolio/
 
 ---
 
-## 주요 특징
+## 주요 기능
 
-- **모바일 퍼스트 반응형**: Hero, About, Skills, Projects, Contact, Footer. 브레이크포인트 768px / 1024px. 모바일 햄버거 메뉴
+### 모바일 퍼스트 반응형
 
-  | 데스크톱 | 모바일 |
-  |:---:|:---:|
-  | <img src="./docs/screenshot-desktop.png" alt="데스크톱 레이아웃" width="280"> | <img src="./docs/screenshot-mobile.png" alt="모바일 레이아웃" width="140"> |
+- 모바일·태블릿·데스크톱 레이아웃 최적화
+- 브레이크포인트: `768px`(태블릿) / `1024px`(데스크톱)
 
-- **다크 모드**: CSS 변수 + `localStorage`로 새로고침 후에도 유지
+| 데스크톱 | 모바일 |
+|:---:|:---:|
+| <img src="./docs/screenshot-desktop.png" alt="데스크톱 레이아웃" width="280"> | <img src="./docs/screenshot-mobile.png" alt="모바일 레이아웃" width="140"> |
 
-  <img src="./docs/screenshot-dark.png" alt="다크 모드" width="280">
+### 인터랙티브 UI
 
-- **인터랙션**: 부드러운 스크롤, 스크롤 탑, 네비게이션 스타일 변경, Intersection Observer 페이드인
-- **Contact 폼**: 필수값·이메일 검증, 필드 옆 에러, 제출 성공 안내
-- **GitHub API**: Projects 카드 동적 렌더링. 로딩 / 성공 / 에러(재시도) / 빈 상태. Rate Limit(403) 처리
+- 다크 모드 토글 (`localStorage`로 새로고침 후에도 유지)
+- 햄버거 메뉴
+- 부드러운 스크롤
+- 스크롤 애니메이션 (Intersection Observer 페이드인)
+- 스크롤 탑
+- 스크롤 시 헤더 스타일 변경 (60px 이상에서 배경·그림자 적용)
 
-### 스크롤·애니메이션 기준값
+<img src="./docs/screenshot-dark.png" alt="다크 모드" width="280">
 
 | 항목 | 기준 |
 |------|------|
-| 네비게이션 스타일 변경 | 스크롤 **60px** 이상 |
-| 스크롤 탑 버튼 표시 | 스크롤 **300px** 이상 |
 | Intersection Observer | `threshold` **0.2** |
+| 스크롤 탑 버튼 표시 | **300px** 이상 |
+| 스크롤 시 헤더 스타일 변경 | **60px** 이상 |
+
+### 폼 유효성 검사
+
+- 필수값·이메일 형식 검증
+- 필드 옆 에러 메시지, 제출 성공 안내
+
+### GitHub API
+
+- Projects 카드 동적 렌더링
+- 로딩 / 성공 / 에러(재시도) / 빈 상태
 
 ---
 
@@ -74,4 +87,4 @@ B4-1.interactive_web_portfolio/
 2. Live Server 확장을 설치합니다.
 3. `index.html` 우클릭 → **Open with Live Server**
 
-최신 Chrome 기준입니다. GitHub API는 인증 없이 **시간당 60회** 제한이 있으니 짧은 시간 내 반복 새로고침은 피하세요.
+GitHub API는 인증 없이 **시간당 60회** 제한이 있으니 짧은 시간 내 반복 새로고침은 피하세요.
