@@ -39,11 +39,11 @@
 
 ## 사용 기술
 
-- HTML5 (시맨틱 마크업)
-- CSS3 (Flexbox, Grid, CSS 변수, 미디어 쿼리)
-- Vanilla JavaScript (DOM API, `localStorage`, Intersection Observer, ES6+)
-- GitHub REST API (`fetch` / `async`·`await`)
-- Font Awesome, Google Fonts (Outfit, Noto Sans KR)
+- HTML5 — 시맨틱 구조
+- CSS3 — 반응형 레이아웃·다크 모드 테마
+- Vanilla JavaScript — DOM 이벤트·상태 렌더링
+- GitHub REST API — Projects 동적 로딩
+- Font Awesome / Google Fonts — 아이콘·타이포
 
 ---
 
