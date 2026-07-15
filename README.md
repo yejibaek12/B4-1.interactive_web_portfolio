@@ -11,6 +11,37 @@
 
 ---
 
+## 개발 환경 · 제약
+
+- 순수 HTML / CSS / JavaScript만 사용 (React, Vue, jQuery, Bootstrap, Tailwind 미사용)
+- Font Awesome, Google Fonts는 허용
+- `const` / `let`, `addEventListener`, CSS·JS 파일 분리
+- 최신 Chrome 기준
+
+---
+
+## 사용 기술
+
+- HTML5 — 시맨틱 구조
+- CSS3 — 반응형 레이아웃·다크 모드 테마
+- Vanilla JavaScript — DOM 이벤트·상태 렌더링
+- GitHub REST API — Projects 동적 로딩
+- Font Awesome / Google Fonts — 아이콘·타이포
+
+---
+
+## 프로젝트 구조
+
+```
+B4-1.interactive_web_portfolio/
+├── index.html       # 시맨틱 마크업
+├── css/style.css    # 레이아웃·테마·반응형
+├── js/main.js       # 이벤트·상태·API
+└── images/profile.svg
+```
+
+---
+
 ## 주요 특징
 
 - **모바일 퍼스트 반응형**: Hero, About, Skills, Projects, Contact, Footer. 브레이크포인트 768px / 1024px. 모바일 햄버거 메뉴
@@ -34,39 +65,6 @@
 | 네비게이션 스타일 변경 | 스크롤 **60px** 이상 |
 | 스크롤 탑 버튼 표시 | 스크롤 **300px** 이상 |
 | Intersection Observer | `threshold` **0.2** |
-
----
-
-## 사용 기술
-
-- HTML5 — 시맨틱 구조
-- CSS3 — 반응형 레이아웃·다크 모드 테마
-- Vanilla JavaScript — DOM 이벤트·상태 렌더링
-- GitHub REST API — Projects 동적 로딩
-- Font Awesome / Google Fonts — 아이콘·타이포
-
----
-
-## 개발 환경 · 제약
-
-- 순수 HTML / CSS / JavaScript (React, Vue, jQuery, Bootstrap, Tailwind 미사용)
-- 허용: Font Awesome, Google Fonts
-- `const` / `let`, `addEventListener`, 외부 CSS·JS 분리
-- 최신 Chrome 기준
-
----
-
-## 프로젝트 구조
-
-```
-B4-1.interactive_web_portfolio/
-├── index.html
-├── css/style.css
-├── js/main.js
-└── images/profile.svg
-```
-
-> **참고:** 프레임워크나 빌드 도구 없이 순수 HTML/CSS/JavaScript만 사용하므로, 스타일과 스크립트는 각각 하나의 파일(`style.css`, `main.js`)로 구성했습니다.
 
 ---
 
