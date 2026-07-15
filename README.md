@@ -1,6 +1,6 @@
 # Interactive Web Portfolio
 
-순수 HTML, CSS, JavaScript로 만든 반응형 개인 포트폴리오입니다.
+프레임워크·UI 라이브러리 없이 순수 HTML, CSS, JavaScript로 만든 반응형 웹 포트폴리오입니다.
 사용자 이벤트 → 상태 변경 → DOM 업데이트 흐름과 GitHub API의 로딩/성공/에러/빈 상태 처리를 중심으로 구현했습니다.
 
 ---
@@ -11,18 +11,18 @@
 
 ---
 
-## 스크린샷
-
-| 데스크톱 | 다크 모드 | 모바일 |
-|:---:|:---:|:---:|
-| <img src="./docs/screenshot-desktop.png" alt="데스크톱" width="280"> | <img src="./docs/screenshot-dark.png" alt="다크 모드" width="280"> | <img src="./docs/screenshot-mobile.png" alt="모바일" width="140"> |
-
----
-
 ## 주요 특징
 
 - **모바일 퍼스트 반응형**: Hero, About, Skills, Projects, Contact, Footer. 브레이크포인트 768px / 1024px. 모바일 햄버거 메뉴
+
+  | 데스크톱 | 모바일 |
+  |:---:|:---:|
+  | <img src="./docs/screenshot-desktop.png" alt="데스크톱 레이아웃" width="280"> | <img src="./docs/screenshot-mobile.png" alt="모바일 레이아웃" width="140"> |
+
 - **다크 모드**: CSS 변수 + `localStorage`로 새로고침 후에도 유지
+
+  <img src="./docs/screenshot-dark.png" alt="다크 모드" width="280">
+
 - **인터랙션**: 부드러운 스크롤, 스크롤 탑, 네비게이션 스타일 변경, Intersection Observer 페이드인
 - **Contact 폼**: 필수값·이메일 검증, 필드 옆 에러, 제출 성공 안내
 - **GitHub API**: Projects 카드 동적 렌더링. 로딩 / 성공 / 에러(재시도) / 빈 상태. Rate Limit(403) 처리
