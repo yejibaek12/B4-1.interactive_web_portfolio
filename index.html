@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yeji Baek | Portfolio</title>
+  <meta name="description" content="HTML, CSS, JavaScript로 만든 반응형 인터랙티브 포트폴리오">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <header class="site-header" id="site-header">
+    <nav class="nav" aria-label="주요 메뉴">
+      <a href="#hero" class="logo">Yeji<span>Baek</span></a>
+
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="nav-menu">
+        <span class="menu-toggle__bar"></span>
+        <span class="menu-toggle__bar"></span>
+        <span class="menu-toggle__bar"></span>
+      </button>
+
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li>
+          <button class="theme-toggle" id="theme-toggle" type="button" aria-label="다크 모드 전환">
+            <i class="fa-solid fa-moon" aria-hidden="true"></i>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section" id="hero">
+      <div class="container hero__inner">
+        <p class="hero__eyebrow">Frontend Developer</p>
+        <h1 class="hero__title">
+          Hello! I am <span class="hero__name">Yeji Baek</span>.
+        </h1>
+        <p class="hero__lead">
+          순수 HTML / CSS / JavaScript로 반응형 포트폴리오를 만듭니다.
+        </p>
+        <div class="hero__actions">
+          <a href="#projects" class="btn btn--primary">View Projects</a>
+          <a href="#contact" class="btn btn--ghost">Contact</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="about section reveal" id="about">
+      <div class="container">
+        <h2 class="section__title">About Me</h2>
+        <p class="section__subtitle">웹의 기초를 단단히 다지고 싶은 개발자입니다.</p>
+        <div class="about__grid">
+          <figure class="about__figure">
+            <img src="images/profile.svg" alt="Yeji Baek의 프로필 이미지" width="280" height="280">
+          </figure>
+          <div class="about__content">
+            <p>
+              HTML, CSS, JavaScript로 사용자 이벤트부터 DOM 변화까지
+              직접 연결하는 경험을 쌓고 있습니다.
+            </p>
+            <p>
+              깔끔한 시맨틱 구조, 반응형 레이아웃, 비동기 API 처리에 관심이 많으며
+              다음 단계인 React 학습의 기반을 다지고 있습니다.
+            </p>
+            <ul class="about__highlights">
+              <li>관심사: 접근성, 반응형 UI, 상태 기반 렌더링</li>
+              <li>목표: 실사용 가능한 포트폴리오와 명확한 코드 흐름</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills section reveal" id="skills">
+      <div class="container">
+        <h2 class="section__title">Skills</h2>
+        <p class="section__subtitle">현재 다루는 기술 스택입니다.</p>
+        <ul class="skills__list">
+          <li class="skill-card">
+            <i class="fa-brands fa-html5" aria-hidden="true"></i>
+            <span>HTML5</span>
+          </li>
+          <li class="skill-card">
+            <i class="fa-brands fa-css3-alt" aria-hidden="true"></i>
+            <span>CSS3</span>
+          </li>
+          <li class="skill-card">
+            <i class="fa-brands fa-js" aria-hidden="true"></i>
+            <span>JavaScript</span>
+          </li>
+          <li class="skill-card">
+            <i class="fa-brands fa-git-alt" aria-hidden="true"></i>
+            <span>Git</span>
+          </li>
+          <li class="skill-card">
+            <i class="fa-brands fa-github" aria-hidden="true"></i>
+            <span>GitHub</span>
+          </li>
+          <li class="skill-card">
+            <i class="fa-solid fa-mobile-screen" aria-hidden="true"></i>
+            <span>Responsive</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="projects section reveal" id="projects">
+      <div class="container">
+        <h2 class="section__title">Projects</h2>
+        <p class="section__subtitle">GitHub API로 불러온 공개 저장소입니다.</p>
+
+        <div class="projects__status" id="projects-status" role="status" aria-live="polite">
+          <div class="spinner" aria-hidden="true"></div>
+          <p>로딩 중...</p>
+        </div>
+
+        <div class="project-grid" id="project-grid"></div>
+      </div>
+    </section>
+
+    <section class="contact section reveal" id="contact">
+      <div class="container">
+        <h2 class="section__title">Contact</h2>
+        <p class="section__subtitle">궁금한 점이 있다면 메시지를 남겨 주세요.</p>
+
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="form-group">
+            <label for="name">이름</label>
+            <input type="text" id="name" name="name" autocomplete="name" placeholder="홍길동">
+            <p class="field-error" id="name-error" role="alert"></p>
+          </div>
+
+          <div class="form-group">
+            <label for="email">이메일</label>
+            <input type="email" id="email" name="email" autocomplete="email" placeholder="hello@example.com">
+            <p class="field-error" id="email-error" role="alert"></p>
+          </div>
+
+          <div class="form-group">
+            <label for="message">메시지</label>
+            <textarea id="message" name="message" rows="5" placeholder="문의 내용을 입력해 주세요."></textarea>
+            <p class="field-error" id="message-error" role="alert"></p>
+          </div>
+
+          <button type="submit" class="btn btn--primary">Send</button>
+          <p class="form-success" id="form-success" role="status" aria-live="polite" hidden>
+            문의가 성공적으로 전송되었습니다.
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__inner">
+      <p>&copy; 2026 Yeji Baek. All rights reserved.</p>
+      <ul class="social-links">
+        <li>
+          <a href="https://github.com/yejibaek12" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <i class="fa-brands fa-github" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scroll-top" type="button" aria-label="맨 위로 이동">
+    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+  </button>
+</body>
+</html>
