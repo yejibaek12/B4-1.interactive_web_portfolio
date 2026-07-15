@@ -47,6 +47,15 @@
 
 ---
 
+## 개발 환경 · 제약
+
+- 순수 HTML / CSS / JavaScript (React, Vue, jQuery, Bootstrap, Tailwind 미사용)
+- 허용: Font Awesome, Google Fonts
+- `const` / `let`, `addEventListener`, 외부 CSS·JS 분리
+- 최신 Chrome 기준
+
+---
+
 ## 프로젝트 구조
 
 ```
@@ -56,6 +65,8 @@ B4-1.interactive_web_portfolio/
 ├── js/main.js
 └── images/profile.svg
 ```
+
+> **참고:** 프레임워크나 빌드 도구 없이 순수 HTML/CSS/JavaScript만 사용하므로, 스타일과 스크립트는 각각 하나의 파일(`style.css`, `main.js`)로 구성했습니다.
 
 ---
 
