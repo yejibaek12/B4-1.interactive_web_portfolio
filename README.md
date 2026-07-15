@@ -13,14 +13,9 @@
 
 ## 스크린샷
 
-### 데스크톱
-![데스크톱](./docs/screenshot-desktop.png)
-
-### 모바일
-![모바일](./docs/screenshot-mobile.png)
-
-### 다크 모드
-![다크 모드](./docs/screenshot-dark.png)
+| 데스크톱 | 다크 모드 | 모바일 |
+|:---:|:---:|:---:|
+| <img src="./docs/screenshot-desktop.png" alt="데스크톱" width="280"> | <img src="./docs/screenshot-dark.png" alt="다크 모드" width="280"> | <img src="./docs/screenshot-mobile.png" alt="모바일" width="140"> |
 
 ---
 
