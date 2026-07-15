@@ -7,8 +7,7 @@
 
 ## 배포 URL
 
-- **GitHub Pages**: [https://yejibaek12.github.io/B4-1.interactive_web_portfolio/](https://yejibaek12.github.io/B4-1.interactive_web_portfolio/)
-- **GitHub 저장소**: [https://github.com/yejibaek12/B4-1.interactive_web_portfolio](https://github.com/yejibaek12/B4-1.interactive_web_portfolio)
+- [https://yejibaek12.github.io/B4-1.interactive_web_portfolio/](https://yejibaek12.github.io/B4-1.interactive_web_portfolio/)
 
 ---
 
