@@ -139,9 +139,9 @@ const setupScrollReveal = () => {
    Contact form: validation state → render
    ---------------------------------------- */
 const formState = {
-  name: { value: "", error: "" },
-  email: { value: "", error: "" },
-  message: { value: "", error: "" },
+  name: { value: "", error: "", touched: false },
+  email: { value: "", error: "", touched: false },
+  message: { value: "", error: "", touched: false },
   success: false,
 };
 
@@ -182,15 +182,28 @@ const setupContactForm = () => {
   const form = document.querySelector("#contact-form");
   if (!form) return;
 
+  const updateField = (field, value, { forceValidate = false } = {}) => {
+    formState[field].value = value;
+
+    if (formState[field].touched || forceValidate) {
+      formState[field].error = validateField(field, value);
+    }
+
+    formState.success = false;
+    renderFormErrors();
+  };
+
   ["name", "email", "message"].forEach((field) => {
     const input = document.querySelector(`#${field}`);
     if (!input) return;
 
     input.addEventListener("input", () => {
-      formState[field].value = input.value;
-      formState[field].error = "";
-      formState.success = false;
-      renderFormErrors();
+      updateField(field, input.value);
+    });
+
+    input.addEventListener("blur", () => {
+      formState[field].touched = true;
+      updateField(field, input.value);
     });
   });
 
@@ -200,8 +213,8 @@ const setupContactForm = () => {
     ["name", "email", "message"].forEach((field) => {
       const input = document.querySelector(`#${field}`);
       const value = input ? input.value : "";
-      formState[field].value = value;
-      formState[field].error = validateField(field, value);
+      formState[field].touched = true;
+      updateField(field, value, { forceValidate: true });
     });
 
     const hasError = ["name", "email", "message"].some(
@@ -215,7 +228,10 @@ const setupContactForm = () => {
       form.reset();
       ["name", "email", "message"].forEach((field) => {
         formState[field].value = "";
+        formState[field].touched = false;
+        formState[field].error = "";
       });
+      renderFormErrors();
     }
   });
 };
