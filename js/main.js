@@ -335,10 +335,12 @@ const loadProjects = async () => {
   renderProjectsStatus();
 
   try {
+    // 여기서 주석하면 error
     const response = await fetch(
       `https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=12`
     );
 
+    // 여기부터 주석하면 로딩
     if (response.status === 403) {
       throw new Error("rate-limit");
     }
@@ -349,6 +351,7 @@ const loadProjects = async () => {
 
     const data = await response.json();
     const repos = Array.isArray(data) ? data : [];
+    // const repos = []
 
     projectsState.repos = repos;
 
